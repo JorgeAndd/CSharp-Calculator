@@ -179,5 +179,20 @@ namespace Calculadora
             toClear = true;
         }
 
+        private void btnBackspace_Click(object sender, EventArgs e)
+        {
+            string s = txtResult.Text;
+
+            if (s.Length > 1)
+            {
+                s = s.Substring(0, s.Length - 1);
+            }
+            else
+            {
+                s = "0";
+            }
+
+            txtResult.Text = s;
+        }
     }
 }

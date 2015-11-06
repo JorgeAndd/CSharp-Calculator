@@ -87,7 +87,7 @@ namespace Calculadora
                     break;
             }
 
-            isMemoryEmpty = true;
+            //isMemoryEmpty = true;
             return memory;
         }
 

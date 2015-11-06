@@ -47,6 +47,8 @@
             this.btnOpEquals = new System.Windows.Forms.Button();
             this.btnOpDiv = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnBackspace = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtResult
@@ -59,7 +61,7 @@
             // 
             // btnNum7
             // 
-            this.btnNum7.Location = new System.Drawing.Point(13, 40);
+            this.btnNum7.Location = new System.Drawing.Point(12, 69);
             this.btnNum7.Name = "btnNum7";
             this.btnNum7.Size = new System.Drawing.Size(75, 23);
             this.btnNum7.TabIndex = 1;
@@ -69,7 +71,7 @@
             // 
             // btnNum4
             // 
-            this.btnNum4.Location = new System.Drawing.Point(12, 69);
+            this.btnNum4.Location = new System.Drawing.Point(11, 98);
             this.btnNum4.Name = "btnNum4";
             this.btnNum4.Size = new System.Drawing.Size(75, 23);
             this.btnNum4.TabIndex = 2;
@@ -79,7 +81,7 @@
             // 
             // btnNum1
             // 
-            this.btnNum1.Location = new System.Drawing.Point(12, 98);
+            this.btnNum1.Location = new System.Drawing.Point(11, 127);
             this.btnNum1.Name = "btnNum1";
             this.btnNum1.Size = new System.Drawing.Size(75, 23);
             this.btnNum1.TabIndex = 3;
@@ -89,7 +91,7 @@
             // 
             // btnOpSign
             // 
-            this.btnOpSign.Location = new System.Drawing.Point(13, 127);
+            this.btnOpSign.Location = new System.Drawing.Point(12, 156);
             this.btnOpSign.Name = "btnOpSign";
             this.btnOpSign.Size = new System.Drawing.Size(75, 23);
             this.btnOpSign.TabIndex = 4;
@@ -98,7 +100,7 @@
             // 
             // btnNum8
             // 
-            this.btnNum8.Location = new System.Drawing.Point(94, 40);
+            this.btnNum8.Location = new System.Drawing.Point(93, 69);
             this.btnNum8.Name = "btnNum8";
             this.btnNum8.Size = new System.Drawing.Size(75, 23);
             this.btnNum8.TabIndex = 5;
@@ -108,7 +110,7 @@
             // 
             // btnNum5
             // 
-            this.btnNum5.Location = new System.Drawing.Point(94, 69);
+            this.btnNum5.Location = new System.Drawing.Point(93, 98);
             this.btnNum5.Name = "btnNum5";
             this.btnNum5.Size = new System.Drawing.Size(75, 23);
             this.btnNum5.TabIndex = 6;
@@ -118,7 +120,7 @@
             // 
             // btnNum2
             // 
-            this.btnNum2.Location = new System.Drawing.Point(94, 98);
+            this.btnNum2.Location = new System.Drawing.Point(93, 127);
             this.btnNum2.Name = "btnNum2";
             this.btnNum2.Size = new System.Drawing.Size(75, 23);
             this.btnNum2.TabIndex = 7;
@@ -128,7 +130,7 @@
             // 
             // btnNum0
             // 
-            this.btnNum0.Location = new System.Drawing.Point(94, 127);
+            this.btnNum0.Location = new System.Drawing.Point(93, 156);
             this.btnNum0.Name = "btnNum0";
             this.btnNum0.Size = new System.Drawing.Size(75, 23);
             this.btnNum0.TabIndex = 8;
@@ -138,7 +140,7 @@
             // 
             // btnNum9
             // 
-            this.btnNum9.Location = new System.Drawing.Point(175, 40);
+            this.btnNum9.Location = new System.Drawing.Point(174, 69);
             this.btnNum9.Name = "btnNum9";
             this.btnNum9.Size = new System.Drawing.Size(75, 23);
             this.btnNum9.TabIndex = 9;
@@ -148,7 +150,7 @@
             // 
             // btnNum6
             // 
-            this.btnNum6.Location = new System.Drawing.Point(175, 69);
+            this.btnNum6.Location = new System.Drawing.Point(174, 98);
             this.btnNum6.Name = "btnNum6";
             this.btnNum6.Size = new System.Drawing.Size(75, 23);
             this.btnNum6.TabIndex = 10;
@@ -158,7 +160,7 @@
             // 
             // btnNum3
             // 
-            this.btnNum3.Location = new System.Drawing.Point(175, 98);
+            this.btnNum3.Location = new System.Drawing.Point(174, 127);
             this.btnNum3.Name = "btnNum3";
             this.btnNum3.Size = new System.Drawing.Size(75, 23);
             this.btnNum3.TabIndex = 11;
@@ -168,7 +170,7 @@
             // 
             // btnComma
             // 
-            this.btnComma.Location = new System.Drawing.Point(175, 127);
+            this.btnComma.Location = new System.Drawing.Point(174, 156);
             this.btnComma.Name = "btnComma";
             this.btnComma.Size = new System.Drawing.Size(75, 23);
             this.btnComma.TabIndex = 12;
@@ -228,19 +230,40 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(175, 156);
+            this.btnClear.Location = new System.Drawing.Point(11, 40);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 18;
-            this.btnClear.Text = "Clear";
+            this.btnClear.Text = "CE";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(92, 40);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "C";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnBackspace
+            // 
+            this.btnBackspace.Location = new System.Drawing.Point(173, 40);
+            this.btnBackspace.Name = "btnBackspace";
+            this.btnBackspace.Size = new System.Drawing.Size(75, 23);
+            this.btnBackspace.TabIndex = 20;
+            this.btnBackspace.Text = "<<";
+            this.btnBackspace.UseVisualStyleBackColor = true;
+            this.btnBackspace.Click += new System.EventHandler(this.btnBackspace_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(344, 191);
+            this.Controls.Add(this.btnBackspace);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnOpDiv);
             this.Controls.Add(this.btnOpEquals);
@@ -288,6 +311,8 @@
         private System.Windows.Forms.Button btnOpEquals;
         private System.Windows.Forms.Button btnOpDiv;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBackspace;
     }
 }
 
