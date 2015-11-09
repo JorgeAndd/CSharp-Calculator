@@ -96,5 +96,23 @@ namespace Calculadora
 
             txtResult.Text = s;
         }
+
+        private void btnClearEntry_Click(object sender, EventArgs e)
+        {
+            txtResult.Text = "0";
+            toClear = true;
+        }
+
+        private void btnHistory_Click(object sender, EventArgs e)
+        {
+
+            lbHistory.Visible = true;
+        }
+
+        private void Form1_Click(object sender, EventArgs e)
+        {
+            if (lbHistory.Visible == true)
+                lbHistory.Visible = false;
+        }
     }
 }

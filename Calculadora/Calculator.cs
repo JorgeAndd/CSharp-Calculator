@@ -10,9 +10,9 @@ namespace Calculadora
     {
         private float memory = 0;
         private bool isMemoryEmpty = true;
-        private enum Op { PLUS, MINUS, TIMES, DIV, RESULT }
+        public enum Op { PLUS, MINUS, TIMES, DIV, RESULT }
         private Op lastOp = Op.RESULT;
-        private float lastValue = 0;
+        private List<historyEntry> history = new List<historyEntry>();
 
         public float Operate(float number, string operation)
         {
@@ -24,6 +24,8 @@ namespace Calculadora
 
                 return memory;
             }
+
+            float operand1 = memory;
 
             switch(lastOp)
             {
@@ -40,6 +42,8 @@ namespace Calculadora
                     memory /= number;
                     break;
             }
+
+            addToHistory(operand1, number, memory, lastOp);
 
             setLastOp(operation);
             return memory;
@@ -72,6 +76,10 @@ namespace Calculadora
 
             float result = memory;
 
+            float operand1, operand2;
+            operand1 = result;
+            operand2 = number;
+
             switch (lastOp)
             {
                 case Op.PLUS:
@@ -92,6 +100,8 @@ namespace Calculadora
                     return 0;
             }
 
+            addToHistory(operand1, operand2, result, lastOp);
+
             isMemoryEmpty = true;
             return result;
         }
@@ -100,6 +110,61 @@ namespace Calculadora
         {
             memory = 0;
             isMemoryEmpty = true;
+        }
+
+        /*
+        public IEnumerable<> getHistory()
+        {
+            return IEnumerable<historyEntry> = history;
+        }
+        */
+
+        private void addToHistory(float operand1, float operand2, float result, Op op)
+        {
+            history.Add(new historyEntry(operand1, operand2, result, op));
+
+            return;
+        }
+
+        private struct historyEntry
+        {
+            private float operand1, operand2, result;
+            private Op op;
+
+            public historyEntry(float operand1, float operand2, float result, Op op)
+            {
+                this.operand1 = operand1;
+                this.operand2 = operand2;
+                this.result = result;
+                this.op = op;
+            }
+
+            public override string ToString()
+            {
+                string historyText = "";
+
+                historyText += operand1;
+
+                switch(op)
+                {
+                    case Op.PLUS:
+                        historyText += " + ";
+                        break;
+                    case Op.MINUS:
+                        historyText += " + ";
+                        break;
+                    case Op.TIMES:
+                        historyText += " + ";
+                        break;
+                    case Op.DIV:
+                        historyText += " + ";
+                        break;
+                }
+
+                historyText += operand2 + " = " + result;
+
+                return historyText;
+            }
         }
     }
 }

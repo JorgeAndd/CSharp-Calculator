@@ -46,15 +46,17 @@
             this.btnOpPlus = new System.Windows.Forms.Button();
             this.btnOpEquals = new System.Windows.Forms.Button();
             this.btnOpDiv = new System.Windows.Forms.Button();
+            this.btnClearEntry = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnBackspace = new System.Windows.Forms.Button();
+            this.lbHistory = new System.Windows.Forms.ListBox();
+            this.btnHistory = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtResult
             // 
             this.txtResult.Enabled = false;
-            this.txtResult.Location = new System.Drawing.Point(46, 14);
+            this.txtResult.Location = new System.Drawing.Point(12, 14);
             this.txtResult.Name = "txtResult";
             this.txtResult.Size = new System.Drawing.Size(259, 20);
             this.txtResult.TabIndex = 0;
@@ -229,24 +231,25 @@
             this.btnOpDiv.UseVisualStyleBackColor = true;
             this.btnOpDiv.Click += new System.EventHandler(this.btnOp_Click);
             // 
+            // btnClearEntry
+            // 
+            this.btnClearEntry.Location = new System.Drawing.Point(54, 40);
+            this.btnClearEntry.Name = "btnClearEntry";
+            this.btnClearEntry.Size = new System.Drawing.Size(75, 23);
+            this.btnClearEntry.TabIndex = 18;
+            this.btnClearEntry.Text = "CE";
+            this.btnClearEntry.UseVisualStyleBackColor = true;
+            this.btnClearEntry.Click += new System.EventHandler(this.btnClearEntry_Click);
+            // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(54, 40);
+            this.btnClear.Location = new System.Drawing.Point(135, 40);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
-            this.btnClear.TabIndex = 18;
-            this.btnClear.Text = "CE";
+            this.btnClear.TabIndex = 19;
+            this.btnClear.Text = "C";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(135, 40);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "C";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // btnBackspace
             // 
@@ -258,14 +261,36 @@
             this.btnBackspace.UseVisualStyleBackColor = true;
             this.btnBackspace.Click += new System.EventHandler(this.btnBackspace_Click);
             // 
+            // lbHistory
+            // 
+            this.lbHistory.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.lbHistory.FormattingEnabled = true;
+            this.lbHistory.Location = new System.Drawing.Point(1, 70);
+            this.lbHistory.Name = "lbHistory";
+            this.lbHistory.Size = new System.Drawing.Size(345, 147);
+            this.lbHistory.TabIndex = 21;
+            this.lbHistory.Visible = false;
+            // 
+            // btnHistory
+            // 
+            this.btnHistory.Location = new System.Drawing.Point(299, 14);
+            this.btnHistory.Name = "btnHistory";
+            this.btnHistory.Size = new System.Drawing.Size(28, 23);
+            this.btnHistory.TabIndex = 22;
+            this.btnHistory.Text = "H";
+            this.btnHistory.UseVisualStyleBackColor = true;
+            this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(344, 218);
+            this.Controls.Add(this.lbHistory);
+            this.Controls.Add(this.btnHistory);
             this.Controls.Add(this.btnBackspace);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnClearEntry);
             this.Controls.Add(this.btnOpDiv);
             this.Controls.Add(this.btnOpEquals);
             this.Controls.Add(this.btnOpPlus);
@@ -286,6 +311,7 @@
             this.Controls.Add(this.txtResult);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Click += new System.EventHandler(this.Form1_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,9 +337,11 @@
         private System.Windows.Forms.Button btnOpPlus;
         private System.Windows.Forms.Button btnOpEquals;
         private System.Windows.Forms.Button btnOpDiv;
+        private System.Windows.Forms.Button btnClearEntry;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnBackspace;
+        private System.Windows.Forms.ListBox lbHistory;
+        private System.Windows.Forms.Button btnHistory;
     }
 }
 
