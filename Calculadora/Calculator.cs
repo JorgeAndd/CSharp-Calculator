@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Calculadora
 {
-    static class Calculator
+    class Calculator
     {
-        private static float memory = 0;
-        private static bool isMemoryEmpty = true;
+        private float memory = 0;
+        private bool isMemoryEmpty = true;
         private enum Op { PLUS, MINUS, TIMES, DIV, RESULT }
-        private static Op lastOp = Op.RESULT;
-        private static float lastValue = 0;
+        private Op lastOp = Op.RESULT;
+        private float lastValue = 0;
 
-        public static float Operate(float number, string operation)
+        public float Operate(float number, string operation)
         {
             if(isMemoryEmpty)
             {
@@ -46,26 +46,26 @@ namespace Calculadora
 
         }
 
-        public static void setLastOp(string operation)
+        public void setLastOp(string operation)
         {
             switch(operation)
             {
-                case "plus":
+                case "+":
                     lastOp = Op.PLUS;
                     return;
-                case "minus":
+                case "-":
                     lastOp = Op.MINUS;
                     return;
-                case "times":
+                case "x":
                     lastOp = Op.TIMES;
                     return;
-                case "div":
+                case "/":
                     lastOp = Op.DIV;
                     return;
             }
         }
 
-        public static float Result(float number)
+        public float Result(float number)
         {
             //if (isMemoryEmpty)
             //    return 0;
@@ -96,7 +96,7 @@ namespace Calculadora
             return result;
         }
 
-        public static void Clear()
+        public void Clear()
         {
             memory = 0;
             isMemoryEmpty = true;
