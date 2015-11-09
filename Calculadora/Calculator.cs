@@ -11,7 +11,8 @@ namespace Calculadora
         private static float memory = 0;
         private static bool isMemoryEmpty = true;
         private enum Op { PLUS, MINUS, TIMES, DIV, RESULT }
-        private static Op lastOp;
+        private static Op lastOp = Op.RESULT;
+        private static float lastValue = 0;
 
         public static float Operate(float number, string operation)
         {
@@ -66,29 +67,33 @@ namespace Calculadora
 
         public static float Result(float number)
         {
-            if (isMemoryEmpty)
-                return 0;
+            //if (isMemoryEmpty)
+            //    return 0;
+
+            float result = memory;
 
             switch (lastOp)
             {
                 case Op.PLUS:
-                    memory += number;
+                    result += number;
                     break;
                 case Op.MINUS:
-                    memory -= number;
+                    result -= number;
                     break;
                 case Op.TIMES:
-                    memory *= number;
+                    result *= number;
                     break;
                 case Op.DIV:
-                    memory /= number;
+                    result /= number;
                     break;
                 case Op.RESULT:
-                    break;
+                    return 0;
+                default:
+                    return 0;
             }
 
-            //isMemoryEmpty = true;
-            return memory;
+            isMemoryEmpty = true;
+            return result;
         }
 
         public static void Clear()

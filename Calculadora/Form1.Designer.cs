@@ -58,6 +58,7 @@
             this.txtResult.Name = "txtResult";
             this.txtResult.Size = new System.Drawing.Size(259, 20);
             this.txtResult.TabIndex = 0;
+            this.txtResult.Text = "0";
             // 
             // btnNum7
             // 
@@ -180,7 +181,7 @@
             // 
             // btnOpTimes
             // 
-            this.btnOpTimes.Location = new System.Drawing.Point(256, 69);
+            this.btnOpTimes.Location = new System.Drawing.Point(255, 98);
             this.btnOpTimes.Name = "btnOpTimes";
             this.btnOpTimes.Size = new System.Drawing.Size(75, 23);
             this.btnOpTimes.TabIndex = 13;
@@ -190,7 +191,7 @@
             // 
             // btnOpMinus
             // 
-            this.btnOpMinus.Location = new System.Drawing.Point(256, 98);
+            this.btnOpMinus.Location = new System.Drawing.Point(255, 127);
             this.btnOpMinus.Name = "btnOpMinus";
             this.btnOpMinus.Size = new System.Drawing.Size(75, 23);
             this.btnOpMinus.TabIndex = 14;
@@ -200,7 +201,7 @@
             // 
             // btnOpPlus
             // 
-            this.btnOpPlus.Location = new System.Drawing.Point(254, 127);
+            this.btnOpPlus.Location = new System.Drawing.Point(253, 156);
             this.btnOpPlus.Name = "btnOpPlus";
             this.btnOpPlus.Size = new System.Drawing.Size(75, 23);
             this.btnOpPlus.TabIndex = 15;
@@ -210,7 +211,7 @@
             // 
             // btnOpEquals
             // 
-            this.btnOpEquals.Location = new System.Drawing.Point(254, 156);
+            this.btnOpEquals.Location = new System.Drawing.Point(253, 185);
             this.btnOpEquals.Name = "btnOpEquals";
             this.btnOpEquals.Size = new System.Drawing.Size(75, 23);
             this.btnOpEquals.TabIndex = 16;
@@ -220,7 +221,7 @@
             // 
             // btnOpDiv
             // 
-            this.btnOpDiv.Location = new System.Drawing.Point(254, 40);
+            this.btnOpDiv.Location = new System.Drawing.Point(253, 69);
             this.btnOpDiv.Name = "btnOpDiv";
             this.btnOpDiv.Size = new System.Drawing.Size(75, 23);
             this.btnOpDiv.TabIndex = 17;
@@ -230,7 +231,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(11, 40);
+            this.btnClear.Location = new System.Drawing.Point(54, 40);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 18;
@@ -240,7 +241,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(92, 40);
+            this.button1.Location = new System.Drawing.Point(135, 40);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 19;
@@ -249,7 +250,7 @@
             // 
             // btnBackspace
             // 
-            this.btnBackspace.Location = new System.Drawing.Point(173, 40);
+            this.btnBackspace.Location = new System.Drawing.Point(216, 40);
             this.btnBackspace.Name = "btnBackspace";
             this.btnBackspace.Size = new System.Drawing.Size(75, 23);
             this.btnBackspace.TabIndex = 20;
@@ -261,7 +262,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(344, 191);
+            this.ClientSize = new System.Drawing.Size(344, 218);
             this.Controls.Add(this.btnBackspace);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnClear);

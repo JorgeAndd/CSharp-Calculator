@@ -12,7 +12,7 @@ namespace Calculadora
 {
     public partial class Form1 : Form
     {
-        private bool toClear = false;
+        private bool toClear = true;
 
         public Form1()
         {
