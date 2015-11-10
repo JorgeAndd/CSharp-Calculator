@@ -111,13 +111,19 @@ namespace Calculadora
             memory = 0;
             isMemoryEmpty = true;
         }
-
-        /*
-        public IEnumerable<> getHistory()
+        
+        public IEnumerable<string> getHistory()
         {
-            return IEnumerable<historyEntry> = history;
+            List<string> historyText = new List<string>();
+
+            foreach(historyEntry entry in history)
+            {
+                historyText.Add(entry.ToString());
+            }
+
+            return historyText;            
         }
-        */
+        
 
         private void addToHistory(float operand1, float operand2, float result, Op op)
         {

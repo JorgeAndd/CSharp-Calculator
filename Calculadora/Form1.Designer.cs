@@ -265,9 +265,9 @@
             // 
             this.lbHistory.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.lbHistory.FormattingEnabled = true;
-            this.lbHistory.Location = new System.Drawing.Point(1, 70);
+            this.lbHistory.Location = new System.Drawing.Point(1, 44);
             this.lbHistory.Name = "lbHistory";
-            this.lbHistory.Size = new System.Drawing.Size(345, 147);
+            this.lbHistory.Size = new System.Drawing.Size(345, 173);
             this.lbHistory.TabIndex = 21;
             this.lbHistory.Visible = false;
             // 

@@ -105,14 +105,16 @@ namespace Calculadora
 
         private void btnHistory_Click(object sender, EventArgs e)
         {
-
             lbHistory.Visible = true;
+
+            lbHistory.DataSource = calculator.getHistory();
         }
 
         private void Form1_Click(object sender, EventArgs e)
         {
             if (lbHistory.Visible == true)
-                lbHistory.Visible = false;
+            {
+                lbHistory.Visible = false;            }
         }
     }
 }
