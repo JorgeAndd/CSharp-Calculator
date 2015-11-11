@@ -20,7 +20,7 @@ namespace Calculadora
             {
                 memory = number;
                 isMemoryEmpty = false;
-                setLastOp(operation);
+                SetLastOp(operation);
 
                 return memory;
             }
@@ -45,12 +45,12 @@ namespace Calculadora
 
             addToHistory(operand1, number, memory, lastOp);
 
-            setLastOp(operation);
+            SetLastOp(operation);
             return memory;
 
         }
 
-        public void setLastOp(string operation)
+        public void SetLastOp(string operation)
         {
             switch(operation)
             {
@@ -111,8 +111,13 @@ namespace Calculadora
             memory = 0;
             isMemoryEmpty = true;
         }
+
+        public void ClearHistory()
+        {
+            history.Clear();
+        }
         
-        public IEnumerable<string> getHistory()
+        public IEnumerable<string> GetHistory()
         {
             List<string> historyText = new List<string>();
 

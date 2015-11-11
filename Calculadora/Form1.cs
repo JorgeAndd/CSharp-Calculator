@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+    TODO: Fix problem when clicking multiple times on an operation
+*/
+
 namespace Calculadora
 {
     public partial class Form1 : Form
@@ -109,17 +113,31 @@ namespace Calculadora
 
         private void btnHistory_Click(object sender, EventArgs e)
         {
-			panelHistory.Visible = true;
-			lbHistory.Visible = true;
+			if(panelHistory.Visible == true)
+            {
+                panelHistory.Visible = false;
+            }
+            else
+            {
+                panelHistory.Visible = true;
+                lbHistory.Visible = true;
 
-            lbHistory.DataSource = calculator.getHistory();
+                lbHistory.DataSource = calculator.GetHistory();
+            }
         }
 
         private void Form1_Click(object sender, EventArgs e)
         {
-            if (lbHistory.Visible == true)
-            {
-                lbHistory.Visible = false;            }
+            //if (lbHistory.Visible == true)
+           // {
+            //    lbHistory.Visible = false;
+           // }
+        }
+
+        private void btnBin_Click(object sender, EventArgs e)
+        {
+            calculator.ClearHistory();
+            lbHistory.DataSource = null;
         }
     }
 }
