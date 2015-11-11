@@ -109,7 +109,8 @@ namespace Calculadora
 
         private void btnHistory_Click(object sender, EventArgs e)
         {
-            lbHistory.Visible = true;
+			panelHistory.Visible = true;
+			lbHistory.Visible = true;
 
             lbHistory.DataSource = calculator.getHistory();
         }
