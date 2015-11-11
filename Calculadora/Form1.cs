@@ -26,25 +26,29 @@ namespace Calculadora
 
             string digit = button.Text;
 
-            if(digit == "0")
-            {
-                if (txtResult.Text == "0")
-                    return;
-                else
-                {
-                    txtResult.AppendText(digit);
-                    return;
-                }
-                    
-            }
+			if(toClear)
+			{
+				txtResult.Text = digit;
+				toClear = false;
 
-            if(toClear)
-            {
-                txtResult.Text = digit;
-                toClear = false;
-            }
-            else
-                txtResult.AppendText(digit);
+				return;
+			}
+
+			if (digit == "0")
+			{
+				if (txtResult.Text == "0")
+					return;
+				else
+				{
+					txtResult.AppendText(digit);
+					return;
+				}
+
+			}
+			else
+			{
+				txtResult.AppendText(digit);
+			}
         }
 
         private void btnComma_Click(object sender, EventArgs e)

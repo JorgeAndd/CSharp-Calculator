@@ -157,13 +157,13 @@ namespace Calculadora
                         historyText += " + ";
                         break;
                     case Op.MINUS:
-                        historyText += " + ";
+                        historyText += " - ";
                         break;
                     case Op.TIMES:
-                        historyText += " + ";
+                        historyText += " * ";
                         break;
                     case Op.DIV:
-                        historyText += " + ";
+                        historyText += " / ";
                         break;
                 }
 
